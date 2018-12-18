@@ -8,9 +8,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Dec 17th| Project Description | Incomplete
-|Dec 17th| Wireframes / Priority Matrix / Functional Components | Incomplete
-|Dec 17th| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Dec 17th| Project Description | complete
+|Dec 17th| Wireframes / Priority Matrix / Functional Components | Complete
+|Dec 17th| Core Application Structure (HTML, CSS, etc.) |incomplete
 |Dec 17th| Pseudocode / actual code | Incomplete
 |Dec 18th| Initial Clickable Model  | Incomplete
 |Dec 18th| MVP | Incomplete
@@ -30,7 +30,8 @@ Description of my game desgin page as well as the layout page!
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
+Include a full list of features that have been prioritized based on the `Time and Importance` Matix. 
+*edit 
 https://res.cloudinary.com/sandi29/image/upload/v1545103041/IMG-4574.jpg
 
 ### MVP/PostMVP - 5min
@@ -49,10 +50,9 @@ https://res.cloudinary.com/sandi29/image/upload/v1545103048/IMG-4579.jpg
 
 #### PostMVP 
 
-- Add user authorization
-- create API functionality
 - create a scoreboard
--create a sound to go along with the timer(jepoardy sound)
+- create a sound to go along with the timer(jepoardy sound)
+
 
 ## Functional Components
 
@@ -60,6 +60,11 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 ### Landing Page
  I would like to buttin to be animated, and once clicked will open up the game page
+ Instructions!!
+ 	*When the game starts, all tiles are turned faced down.l
+ 	*The player them flips over two cards, selecting them by clicking on them.
+ 	*If the two tiles have the same image, they remain face up.If not, they should be flipped face down again after a short delay.
+
 
 ### Game Initialization
 
@@ -81,8 +86,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding timer | H | 3hrs| 3.5hrs | 3.5hrs |
-| getting cards to flip and match | H | 3hrs| 2.5hrs | 2.5hrs |
+| Adding timer | B | 3hrs| 3.5hrs | 0 hrs |
+| getting cards to flip and match | A | 3hrs| 0 hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Helper Functions
@@ -94,6 +99,7 @@ Helper functions should be generic enought that they can be reused in other appl
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
+ -Might use Jquery as well as bootsrap
 
 ## Code Snippet
 
