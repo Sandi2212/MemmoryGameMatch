@@ -24,31 +24,31 @@ const squares = [
 let squaresArray = [
 	{ 
 		name:'cat1',
-		img: './images/cat.jpeg', 
+		img: 'images/cat.jpeg', 
 		type: 'prince'
 	},
 	{
 		name:'cat1',
-		img: './images/cat2.jpeg',
+		img: 'images/cat2.jpeg',
 		type: 'prince'
 	},
 	{
 		name:'mmouse', 
-		img: './images/mic.jpeg', 
+		img: 'images/mic.jpeg', 
 		type: 'prince'
 	},
 	{
 		name:'mmouse', 
-		img: './images/mic2.jpeg', 
+		img: 'images/mic2.jpeg', 
 		type: 'prince'
 	},
 	{ 	
 		name:'jerry', 
-		img: './images/jerry.jpeg', 
+		img: 'images/jerry.jpeg', 
 		type:'prince'
 	},
 	{ 	name:'jerry', 
-		img: './images/jerry2.jpeg', 
+		img: 'images/jerry2.jpeg', 
 		type: 'prince'
 	},
 	{
@@ -63,40 +63,40 @@ let squaresArray = [
 	//add extra imgs
 	{ 
 		name:'peach',
-		img: './images/peach.jpeg', 
+		img: 'images/peach.jpeg', 
 		type: 'prince'
 	},
 	{
 		name:'peach',
-		img: './images/peach.jpeg',
+		img: 'images/peach.jpeg',
 		type: 'prince'
 	},
 	{
 		name:'red', 
-		img: './images/red.jpeg', 
+		img: 'images/red.jpeg', 
 		type: 'prince'
 	},
 	{
 		name:'red', 
-		img: './images/red.jpeg', 
+		img: 'images/red.jpeg', 
 		type: 'prince'
 	},
 	{ 	
 		name:'mulan', 
-		img: './images/mulan.jpeg', 
+		img: 'images/mulan.jpeg', 
 		type:'prince'
 	},
 	{ 	name:'mulan', 
-		img: './images/mulan.jpeg', 
+		img: 'images/mulan.jpeg', 
 		type: 'prince'
 	},
 	{
 		name:'mickeyboy', 
-		img:'./images/mickeyg.jpeg', 
+		img:'images/mickeyg.jpeg', 
 		type: 'prince'
 	},
 	{ 	name:'mickeyboy', 
-		img: './images/mickeyg.jpeg', 
+		img: 'images/mickeyg.jpeg', 
 		type: 'prince'
 	}
 
