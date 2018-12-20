@@ -246,9 +246,15 @@ let flipDeck = [];
 	// 	console.log(currentDiv)
 		
 	// }
-	c.setAttribute('src', './images/dis4.jpeg');
-	d.setAttribute('src', './images/dis4.jpeg');
-}	
+	c.setAttribute('src', './images/dis2.GIF');
+	d.setAttribute('src', './images/dis2.GIF');
+}
+
+let button = document.querySelector(".reset")
+button.addEventListener("click", function () {
+	// body...
+	location.reload();	
+})
  							
  
  // function reset(evt){

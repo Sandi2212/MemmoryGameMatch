@@ -4,11 +4,32 @@
 
 }
 h1{
-	 text-align: center;
-	 color: white;
+	
+	text-align: center;
+    font-family: 'Mali', cursive;
+    color: White;
+    margin: 20px;
+
+}
+ h1:hover {
+  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+
+  @-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+
+
+}
 }
 body{
-	display: grid;
+	display:flex;
 }
 .game-board{
 	height:760px; 
@@ -84,11 +105,18 @@ height: 100%;
 
 }
 .hide{
-background-image:'./images/dis4.jpeg'; 
+background-image:'./images/dis2.GIF'; 
 }
 .show{
 display: block;
 transform: rotateY( 180deg );
+}
+button{
+	 margin: 10px auto;
+    width: 200px;
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    display: block;
 }
 .video{
   position: fixed;
