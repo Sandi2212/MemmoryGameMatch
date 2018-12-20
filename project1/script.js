@@ -13,55 +13,100 @@ const squares = [
   { x: 2, y: 0 },
   { x: 2, y: 1 }, 
   { x: 2, y: 2 },
-  { x: 2, y: 3 },
+  { x: 2, y: 3 }, 
+  { x: 3, y: 0 },
+  { x: 3, y: 1 }, 
+  { x: 3, y: 2 },
+  { x: 3, y: 3 },
 ];
 
 let squaresArray = [
 	{ 
 		name:'cat1',
 		img: './images/cat.jpeg', 
-		type: 'princes1'
+		type: 'prince'
 	},
 	{
 		name:'cat1',
 		img: './images/cat2.jpeg',
-		type: 'princes2'
+		type: 'prince'
 	},
 	{
 		name:'mmouse', 
 		img: './images/mic.jpeg', 
-		type: 'princes'
+		type: 'prince'
 	},
 	{
 		name:'mmouse', 
 		img: './images/mic2.jpeg', 
-		type: 'princes'
+		type: 'prince'
 	},
 	{ 	
 		name:'jerry', 
 		img: './images/jerry.jpeg', 
-		type:'princes'
+		type:'prince'
 	},
 	{ 	name:'jerry', 
 		img: './images/jerry2.jpeg', 
-		type: 'princes'
+		type: 'prince'
 	},
 	{
 		name:'dog', 
 		img:'./images/dog.jpeg', 
-		type: 'princes'
+		type: 'prince'
 	},
 	{ 	name:'dog', 
 		img: './images/dog2.jpeg', 
-		type: 'princes'
+		type: 'prince'
+	},
+	//add extra imgs
+	{ 
+		name:'peach',
+		img: './images/cat.jpeg', 
+		type: 'prince'
+	},
+	{
+		name:'peach',
+		img: './images/peach.jpeg',
+		type: 'prince'
+	},
+	{
+		name:'red', 
+		img: './images/red.jpeg', 
+		type: 'prince'
+	},
+	{
+		name:'red', 
+		img: './images/red.jpeg', 
+		type: 'prince'
+	},
+	{ 	
+		name:'mulan', 
+		img: './images/mulan.jpeg', 
+		type:'prince'
+	},
+	{ 	name:'mulan', 
+		img: './images/mulan.jpeg', 
+		type: 'prince'
+	},
+	{
+		name:'mickeyboy', 
+		img:'./images/mickeyg.jpeg', 
+		type: 'prince'
+	},
+	{ 	name:'mickeyboy', 
+		img: './images/mickeyg.jpeg', 
+		type: 'prince'
 	}
+
 ];
+let sAClone = squaresArray.map(x => x );
+
 
 let usedCards = []
-// cardDiv.setAttribute("src", `{square[cardIdCheck].img}`);
-// 	 cardIdCheck = this.getAttribute('data-name');
+
 function renderSquares(){
-	for (var i = squaresArray.length -1 ; i >= 0; i--) {
+	for (let i = squaresArray.length -1 ; i >= 0; i--) {
 		//had to use a decrementing for loop because originally when I used the splice method to 
 		// remove items from beeing repeated more than once
 		// This is because iterating incrementally through the array, when you splice it, 
@@ -69,30 +114,34 @@ function renderSquares(){
 		// "shifted" and you end up skipping the iteration of some. 
 		// Looping backwards (with a while or even a for loop) fixes 
 		// this because you're not looping in the direction you're splicing. 
-		console.log(i)
-		console.log(squaresArray.length)
+		// console.log(i)
+		// console.log(squaresArray.length)
 		let cardDiv = document.createElement('div');
 		cardDiv.classList.add('square');
-		// cardDiv.classList.add('front');
-
 		let cardImg = document.createElement('img');
 		cardImg.classList.add('card-image');
+		cardImg.classList.add('hide');
 		let number = Math.floor(Math.random() * squaresArray.length);
-		cardImg.setAttribute('src', `${squaresArray[number].img}`);
+		// cardImg.setAttribute('src', `${squaresArray[number].img}`);
+		cardImg.setAttribute('src', './images/dis2.GIF');
 		cardImg.setAttribute('data-name', `${squaresArray[number].name}`);
 	 	let randomArray = squaresArray.splice(number, 1)
-	 	 console.log(randomArray);
+	 	 
 	 	 
 
 //data attribute is a useful tool for comparison in this game
 		cardDiv.appendChild(cardImg);
 		cardDiv.addEventListener('click', (evt) => {
-			handleClick(evt);
-
+			evt.preventDefault();
+			cardDiv.classList.add('show');
+			console.log(cardDiv);
+			cardDiv.classList.remove('hide');
+			console.log(cardDiv);
+			handleClick(evt.target);
+			flip(evt);
+			
 		});
-		
-
-		
+			
 		$gameboard.append(cardDiv);	
 	}}
 
@@ -102,21 +151,28 @@ renderSquares();
 let clickArr = [];
 
 function handleClick(evt) {
+	let thisClick = evt;
+	let lastClick = clickArr[0];
 	let stop = false;
 	// After 2nd click
 	while (clickArr.length < 3 && stop === false) {
-		if (clickArr.length < 2) {
-		 	clickArr.push(evt.target.dataset.name);
-		 	console.log(clickArr)
+		if (clickArr.length === 1) {
+		 	clickArr.push(thisClick);
+		 	console.log(clickArr);
+		
+
 		 	// console.log(evt.target.dataset.name);
-		 	checkForMatch(evt.target.dataset.name);
+		 	checkForMatch(thisClick, lastClick);
 
 		 	// check if they match
 		 }
 		 // After 1st click
-		 else if (clickArr.length < 1) {
-		 	clickArr.push(evt);
-		 	console.log(evt.target.dataset.name);
+		 else {
+		 	clickArr.push(thisClick);
+		 	console.log(clickArr);
+		 	console.log(thisClick);
+
+		 	// console.log(evt.target.dataset.name);
 		 	
 		 }
 		 stop = true;
@@ -124,48 +180,86 @@ function handleClick(evt) {
 }
 	
 
-function checkForMatch (evt){
+function checkForMatch(a, b){
+	if (a.dataset.name === b.dataset.name) {
+		alert("it's a match");
+		clickArr = [];
+	} else {
+		console.log('not match');
+		a.classList.add('hide');
+		a.classList.remove('show');
+
+		reset(a,b);
+		clickArr = [];
+	}
 
 
 	// console.log(evt);
 	
-	if(clickArr.length === 2 ){
+	// if(clickArr.length === 2 ){
 
-	let firstCard = clickArr[0].length;
-	let secondCard = clickArr[1].length;
+	// 		let firstCard = clickArr[0].length;
+	// 		let secondCard = clickArr[1].length;
 
-	console.log(firstCard, "firstcard");
-	console.log(secondCard, "2card");
+	// 		// console.log(firstCard, "firstcard");
+	// 		// console.log(secondCard, "2card");
 
-	if (firstCard  === secondCard) {
-		alert("it's a match")
-	} else {
-		alert("not a match")
-	}
-
-	
+	// 		if (firstCard  === secondCard) {
+	// 			alert("it's a match")
 		
-}
+	// 		} else {
+	// 			alert("not a match")
+	// 			reset(evt.target.dataset.name)
+				
+	// }		
 }
 
-	
+console.log(sAClone);	
+let flipDeck = [];
+ function flip(evt){
+		 let currentDiv = evt.target;
+			// console.log(evt.target.dataset.name)
+			// find the dataname of the current div being targeted
+		 	for(let j = 0; j < sAClone.length; j++){
+		 		if(currentDiv.dataset.name ===  sAClone[j].name){
+		 		currentDiv.src = sAClone[j].img
+		 		currentDiv.classList.add("square2")
+		 		// console.log(sAClone[j].img);
+		 		// console.log(currentDiv)	
+		 		}
+		 	
+		 		
+ 			}
+ 			if(flipDeck.length < 2 ) {
+ 				flipDeck.push(evt.target.dataset.name)
+ 				// console.log(flipDeck)
+ 				// reset(evt.target.dataset.name)	
+
+ 			}
+ 	
+ }
+
+ function reset(c,d){
+	// if (flipDeck.length === 2 ){
+	// 	currentDiv.src = './images/dis4.jpeg'
+
+	// 	console.log(currentDiv)
+		
+	// }
+	c.setAttribute('src', './images/dis4.jpeg');
+	d.setAttribute('src', './images/dis4.jpeg');
+}	
+ 							
  
+ // function reset(evt){
+ // 		if(currentDiv.dataset.name ===  sAClone[j].name){
+	// 	 		currentDiv.src = sAClone[j].img
+	// 	 		console.log(sAClone[j].img);
+ // 			}
+ // 	let tester = document.querySelectorAll('square');
+ // 	console.log(tester);
 
-
-///need to get all thenmeory cards
-
-
-
-// 	//if the card has not been clicked then click it
-// 	//if it been clicked the
 	
-// }
-//use an array of objects for name/images/type=="match cards" 
-
-//will need a shuffle fuinction
-//keep track of clicks... handle click functuon
-//used two variables , used a first click and for the second click
-//use an emptry array to check for each clcik
 
 //check if they match
 //may need an A and b parameter

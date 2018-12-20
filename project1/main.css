@@ -1,28 +1,33 @@
 *{
 	margin:0;
 	padding: 0;
+
 }
 h1{
 	 text-align: center;
+	 color: white;
 }
 body{
-		 display: flex;
+	display: grid;
 }
 .game-board{
-	height:805px; 
-	width:805px;
-	 border: solid 1px black;
-	 display: flex;
-	 flex-wrap: wrap;
-/*	  margin: 10px auto;*/
+	height:760px; 
+	width:760px;
+	 border: solid 2px black;
+	/* display: flex;
+	 flex-wrap: wrap;*/
+	  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 200px;
+	 margin: 10px auto;
+	perspective: 400px;
 
 }
 .square{
  border: solid 1px black;
- width: 400px;
-height: 400px;
-background-image: url('./images/dis5.GIF');
-
+ width: 190px;
+height: 190px;
+transition: transform 1s;
 }
 .info-card {
    
@@ -30,16 +35,17 @@ background-image: url('./images/dis5.GIF');
 	-webkit-perspective: 600px;
 }
 
-.front, .back {
-	background: #FFF;
+.hide, .show {
+	/*background: #FFF;
 	border-radius: 10px;
 	transition: -webkit-transform 1s;
 	-webkit-transform-style: preserve-3d;
 	-webkit-backface-visibility: hidden;
-	border: 1px solid black;
+	border: 1px solid black;*/
+	/*backface-visibility: hidden;*/
 }
 
-.front {
+/*.front {
 	overflow: hidden;
 	width: 150px;
 	height: 150px;
@@ -59,12 +65,11 @@ background-image: url('./images/dis5.GIF');
 	height: 190px;
 	-webkit-transform: rotateY(-180deg);
 	overflow: scroll;
-	background-image: url('./images/dis4.jpeg') 
 }
 .back:hover{
 	-webkit-transform: rotateY(0);
 }
-
+*/
 /*.info-card:hover .back {
 	-webkit-transform: rotateY(0);
 }*/
@@ -76,5 +81,27 @@ background-image: url('./images/dis5.GIF');
 .card-image {
 width: 100%;
 height: 100%;
-background-image: url('./images/dis5.GIF');
+
+}
+.hide{
+background-image:'./images/dis4.jpeg'; 
+}
+.show{
+display: block;
+transform: rotateY( 180deg );
+}
+.video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover; 
 }
