@@ -57,7 +57,7 @@ let squaresArray = [
 		type: 'prince'
 	},
 	{ 	name:'dog', 
-		img: './images/dog2.jpeg', 
+		img: 'images/dog2.jpeg', 
 		type: 'prince'
 	},
 	//add extra imgs
