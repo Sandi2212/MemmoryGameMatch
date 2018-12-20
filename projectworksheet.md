@@ -46,12 +46,13 @@ https://res.cloudinary.com/sandi29/image/upload/v1545103048/IMG-4579.jpg
 - Getting the cards to match
 - Render data on page
 - Allow user to click cards and they flip and function properly
-- Getting the timer to work
+
 
 #### PostMVP 
 
 - create a scoreboard
 - create a sound to go along with the timer(jepoardy sound)
+- Getting the timer to work
 
 
 ## Functional Components
