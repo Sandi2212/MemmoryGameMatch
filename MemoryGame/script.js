@@ -53,7 +53,7 @@ let squaresArray = [
 	},
 	{
 		name:'dog', 
-		img:'./images/dog.JPEG', 
+		img:'images/dog.JPEG', 
 		type: 'prince'
 	},
 	{ 	name:'dog', 
@@ -63,40 +63,40 @@ let squaresArray = [
 	//add extra imgs
 	{ 
 		name:'peach',
-		img: 'images/peach.jpeg', 
+		img: 'images/peach.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'peach',
-		img: 'images/peach.jpeg',
+		img: 'images/peach.JPEG',
 		type: 'prince'
 	},
 	{
 		name:'red', 
-		img: 'images/red.jpeg', 
+		img: 'images/red.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'red', 
-		img: 'images/red.jpeg', 
+		img: 'images/red.JPEG', 
 		type: 'prince'
 	},
 	{ 	
 		name:'mulan', 
-		img: 'images/mulan.jpeg', 
+		img: 'images/mulan.JPEG', 
 		type:'prince'
 	},
 	{ 	name:'mulan', 
-		img: 'images/mulan.jpeg', 
+		img: 'images/mulan.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'mickeyboy', 
-		img:'images/mickeyg.jpeg', 
+		img: 'images/mickeyg.JPEG', 
 		type: 'prince'
 	},
 	{ 	name:'mickeyboy', 
-		img: 'images/mickeyg.jpeg', 
+		img: 'images/mickeyg.JPEG', 
 		type: 'prince'
 	}
 
