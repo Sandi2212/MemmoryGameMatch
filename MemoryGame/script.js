@@ -1,5 +1,5 @@
 const $gameboard= document.querySelector('.game-board');
-
+timer();
 
 
 const squares = [
@@ -106,25 +106,22 @@ let sAClone = squaresArray.map(x => x );
 
 let usedCards = []
 
-function renderSquares(){
-	for (let i = squaresArray.length -1 ; i >= 0; i--) {
-		//had to use a decrementing for loop because originally when I used the splice method to 
+
+		//I had to use a decrementing for loop because originally when I used the splice method to 
 		// remove items from being repeated more than once
 		//it began to remove my images and push it into another array or create another array
-		// This is because iterating incrementally through the array, when you splice it, 
 		// the array is modified in place, so the items are 
 		// "shifted" and you end up skipping the iteration of some. 
 		// Looping backwards (with a while or even a for loop) fixes 
-		// this because you're not looping in the direction you're splicing. 
-		// console.log(i)
-		// console.log(squaresArray.length)
+		// this because you're not looping in the direction you're splicing.
+function renderSquares(){
+	for (let i = squaresArray.length -1 ; i >= 0; i--) { 
 		let cardDiv = document.createElement('div');
 		cardDiv.classList.add('square');
 		let cardImg = document.createElement('img');
 		cardImg.classList.add('card-image');
 		cardImg.classList.add('hide');
 		let number = Math.floor(Math.random() * squaresArray.length);
-		// cardImg.setAttribute('src', `${squaresArray[number].img}`);
 		cardImg.setAttribute('src', './images/dis2.GIF');
 		cardImg.setAttribute('data-name', `${squaresArray[number].name}`);
 	 	let randomArray = squaresArray.splice(number, 1)
@@ -165,8 +162,6 @@ function handleClick(evt) {
 		 	clickArr.push(thisClick);
 		 	console.log(clickArr);
 			checkForMatch(thisClick, lastClick);
-
-		 	// console.log(evt.target.dataset.name);
 		 	
 		 	stop = true;
 		 	// check if they match
@@ -178,7 +173,7 @@ function handleClick(evt) {
 		 	console.log(thisClick);
 		 	
 		 	stop = true;
-		 	// console.log(evt.target.dataset.name);
+		 	
 		 	
 		 }
 		 stop = true;
@@ -232,10 +227,10 @@ let flipDeck = [];
 
 let button = document.querySelector(".reset")
 button.addEventListener("click", function () {
-	// body...
 	location.reload();	
 })
-
+// Parts of the following code is from https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
+function timer(){
    let timeRemain = 60;
     let  downloadTimer = setInterval(function(){
     timeRemain--;
@@ -243,14 +238,16 @@ button.addEventListener("click", function () {
     if(timeRemain <= 0){
         clearInterval(downloadTimer);
         confirm('You lose , would you like to play again?')
+        location.reload();
     }
     
     },1000);
-
- 						
-let checkForWin = function() {
-		let numberOfMatchedCards = document.querySelectorAll(".match");
-		if(numberOfMatchedCards === 16)
+}
+ //this function keeps returning an empty array						
+function checkForWin() {
+		let matchedCards = document.querySelectorAll("match");
+		console.log(matchedCards)
+		if( matchedCards.length === 16)
 			alert('You win!');
 	};
 
