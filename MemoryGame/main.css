@@ -113,9 +113,35 @@ button{
   transform: translateX(-50%) translateY(-50%);
   background-size: cover; 
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 450px) {
   /* For mobile phones: */
   body{
-    background-color:red ;
+    display: flex;
+    flex-direction: column;
   }
+}@media (max-width: 451px) and (max-width: 540px) {
+	body{
+    display: flex;
+    flex-direction: column;
+  }
+
+}@media (max-width: 541px) and (max-width: 768px){
+	body{
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+  	font-size: 70px;
+  }
+  }@media (max-width: 769px) and (max-width: 1024px){
+  		body{
+    display: flex;
+    flex-direction: column;
+  	}
+  }@media (max-width: 1025px) and (max-width: 1200px){
+  body{
+    display: flex;
+    flex-direction: column;
+  	}
 }
+
