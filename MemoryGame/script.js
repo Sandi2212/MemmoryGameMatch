@@ -201,7 +201,7 @@ function checkForMatch(a, b){
 		clickArr = [];
 	}
 
-
+checkForWin();
 		
 }
 
@@ -235,31 +235,24 @@ button.addEventListener("click", function () {
 	// body...
 	location.reload();	
 })
+
+   let timeRemain = 60;
+    let  downloadTimer = setInterval(function(){
+    timeRemain--;
+    document.getElementById("countdowntimer").textContent = timeRemain;
+    if(timeRemain <= 0){
+        clearInterval(downloadTimer);
+        confirm('You lose , would you like to play again?')
+    }
+    
+    },1000);
+
  						
-//  timer(10);
-//  let countdown;
-// function timer(seconds){
-// 	const now = Date.now();
-// 	console.log(now)
-// 	const then = now + seconds * 1000;
-// 	displayTimeLeft(seconds);
-// 	console.log(then);
-// 	setInterval(() => {
-// 		const secondsLeft = Math.round((then - Date.now()) / 1000);
-// 		//check if we should stop it!
-// 		if(secondsLeft < 0){
-		
-// 			clearInterval(countdown)
-// 			return;
-// 			console.log(countdown);
-// 		}
-// 		// display it
-// 		displayTimeLeft(secondsLeft){
-// 	},1000);
-// }
-// function displayTimeLeft(seconds){
-// 	console.log(seconds);
-// }
+let checkForWin = function() {
+		let numberOfMatchedCards = document.querySelectorAll(".match");
+		if(numberOfMatchedCards === 16)
+			alert('You win!');
+	};
 
 
 //you will need a check win function
