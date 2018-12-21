@@ -10,18 +10,16 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |Dec 17th| Project Description | complete
 |Dec 17th| Wireframes / Priority Matrix / Functional Components | Complete
-|Dec 17th| Core Application Structure (HTML, CSS, etc.) |incomplete
-|Dec 17th| Pseudocode / actual code | Incomplete
+|Dec 20th| Core Application Structure (HTML, CSS, etc.) |Complete
+|Dec 17th| Pseudocode / actual code | Complete
 |Dec 18th| Initial Clickable Model  | Incomplete
-|Dec 18th| MVP | Incomplete
+|Dec 19th| MVP | Complete
 |Dec 20th| Present | Incomplete
 
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
-I am building a memory game!
-I will use a set timeout function to visulally display the cards for 2-4 (haven't decided yet) seconds then the user will have 1 min to match the cards based on memory.
+My final project is a Memory match game. It give sthe user a minute to match all the cards.If they can manage to match all the cards they win if not they lose.
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
@@ -60,16 +58,16 @@ https://res.cloudinary.com/sandi29/image/upload/v1545103048/IMG-4579.jpg
 Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
 
 ### Landing Page
- I would like to buttin to be animated, and once clicked will open up the game page
+ I would like to button to be animated, and once clicked will open up the game page
  Instructions!!
- 	*When the game starts, all tiles are turned faced down.l
- 	*The player them flips over two cards, selecting them by clicking on them.
+ 	*When the user clicks on the title the game starts, 
+ 	*The player has under a min to flip over each card and get them to match.
  	*If the two tiles have the same image, they remain face up.If not, they should be flipped face down again after a short delay.
 
 
 ### Game Initialization
 
-- when user enters game they will see all the cards for 2 seconds.
+- When the user click on title , they see the mission that awaits them
 
 ### Playing The Game 
 
@@ -113,10 +111,11 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ I originally planned on having my game title adjacent to my game div but the my reset utton was not lining up to be adjacent to thebard as well. I also wante to add some media query styling and bootstrap styling but ran out of time.
+
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+ My project/game for the most part went great. There are some minor bugs and my check for winner function is not working properly but overall I COMPLETED my MVP , so I am proud ! WOOHOO! HTML was obviously not a problem, and the CSS I actually had no problem at all. I have a really good grasp of CSS and I really enjoy using CSS. The javascript portion of my project was very interesting and challenging.I ran into many problems such as figuring how to make my images match and how to make them flip and flip back thorough js as well as shuffle!It was a tough roller coasted ride but I made it through.  
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
