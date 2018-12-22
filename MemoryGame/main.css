@@ -3,6 +3,7 @@
 	padding: 0;
 
 }
+/*----styling for splash page*/
 h1,.title{
 	text-align: center;
     font-family: 'Mali', cursive;
@@ -42,7 +43,7 @@ h1,.title{
 
 }
 /*
-/*/ /*took keyframes animation from codepen*/
+/*/ /*provided keyframes information from*//*https://codepen.io/FelixRilling/pen/qzfoc*/
   @-webkit-keyframes neon3 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
@@ -53,11 +54,11 @@ h1,.title{
 
 }
 }
+/*-----Styling for gamepage/Index.html*/
 .countdowntimer{
 	color: white;
 	font-size: 26px;
 }
-
 .game-board{
 	height:760px; 
 	width:760px;
@@ -77,7 +78,6 @@ h1,.title{
    transition: transform 1s;
 }
 .info-card {
-   
    -webkit-perspective: 600px;
 }
 .card-image {

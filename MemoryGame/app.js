@@ -1,7 +1,9 @@
+
+//Built gameboard
 const $gameboard= document.querySelector('.game-board');
 timer();
 
-
+//coordinates for grid on gameboard
 const squares = [
   { x: 0, y: 0 },  		
   { x: 0, y: 1 },		
@@ -125,9 +127,7 @@ function renderSquares(){
 		cardImg.setAttribute('src', './images/dis2.GIF');
 		cardImg.setAttribute('data-name', `${squaresArray[number].name}`);
 	 	let randomArray = squaresArray.splice(number, 1)
-	 	 
-	 	 
-
+	 	 	 	 
 //data attribute is a useful tool for comparison in this game
 		cardDiv.appendChild(cardImg);
 		cardDiv.addEventListener('click', (evt) => {
@@ -172,8 +172,7 @@ function handleClick(evt) {
 		 	console.log(clickArr);
 		 	console.log(thisClick);
 		 	
-		 	stop = true;
-		 	
+		 	stop = true;	 	
 		 	
 		 }
 		 stop = true;
@@ -213,7 +212,6 @@ let flipDeck = [];
 			 			}if(flipDeck.length < 2 ) {
 		 				flipDeck.push(evt.target.dataset.name)	
 					}
- 	
  		}
 
  function reset(c,d){
