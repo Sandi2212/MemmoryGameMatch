@@ -26,79 +26,79 @@ const squares = [
 let squaresArray = [
 	{ 
 		name:'cat1',
-		img: 'images/cat.JPEG', 
+		img: 'assets/images/cat.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'cat1',
-		img: 'images/cat2.JPEG',
+		img: 'assets/images/cat2.JPEG',
 		type: 'prince'
 	},
 	{
 		name:'mmouse', 
-		img: 'images/mic.JPEG', 
+		img: 'assets/images/mic.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'mmouse', 
-		img: 'images/mic2.JPEG', 
+		img: 'assets/images/mic2.JPEG', 
 		type: 'prince'
 	},
 	{ 	
 		name:'jerry', 
-		img: 'images/jerry.JPEG', 
+		img: 'assets/images/jerry.JPEG', 
 		type:'prince'
 	},
 	{ 	name:'jerry', 
-		img: 'images/jerry2.JPEG', 
+		img: 'assets/images/jerry2.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'dog', 
-		img:'images/dog.JPEG', 
+		img:'assets/images/dog.JPEG', 
 		type: 'prince'
 	},
 	{ 	name:'dog', 
-		img: 'images/dog2.JPEG', 
+		img: 'assets/images/dog2.JPEG', 
 		type: 'prince'
 	},
 	//add extra imgs
 	{ 
 		name:'peach',
-		img: 'images/peach.JPEG', 
+		img: 'assets/images/peach.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'peach',
-		img: 'images/peach.JPEG',
+		img: 'assets/images/peach.JPEG',
 		type: 'prince'
 	},
 	{
 		name:'red', 
-		img: 'images/red.JPEG', 
+		img: 'assets/images/red.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'red', 
-		img: 'images/red.JPEG', 
+		img: 'assets/images/red.JPEG', 
 		type: 'prince'
 	},
 	{ 	
 		name:'mulan', 
-		img: 'images/mulan.JPEG', 
+		img: 'assets/images/mulan.JPEG', 
 		type:'prince'
 	},
 	{ 	name:'mulan', 
-		img: 'images/mulan.JPEG', 
+		img: 'assets/images/mulan.JPEG', 
 		type: 'prince'
 	},
 	{
 		name:'mickeyboy', 
-		img: 'images/mickeyg.JPEG', 
+		img: 'assets/images/mickeyg.JPEG', 
 		type: 'prince'
 	},
 	{ 	name:'mickeyboy', 
-		img: 'images/mickeyg.JPEG', 
+		img: 'assets/images/mickeyg.JPEG', 
 		type: 'prince'
 	}
 
@@ -124,7 +124,7 @@ function renderSquares(){
 		cardImg.classList.add('card-image');
 		cardImg.classList.add('hide');
 		let number = Math.floor(Math.random() * squaresArray.length);
-		cardImg.setAttribute('src', './images/dis2.GIF');
+		cardImg.setAttribute('src', './assets/images/dis2.GIF');
 		cardImg.setAttribute('data-name', `${squaresArray[number].name}`);
 	 	let randomArray = squaresArray.splice(number, 1)
 	 	 	 	 
@@ -217,10 +217,10 @@ let flipDeck = [];
  function reset(c,d){
 	c.style.transition = 'all 2s ease-in-out';//Gives the image change a smooth transition
 	c.style.transform = 'rotateY( 180deg )';//Gives the image change a  nice rotation
-	setTimeout(function(){c.src = './images/dis2.GIF';},1000); // after one second flip the images back if they don't match
+	setTimeout(function(){c.src = './assets/images/dis2.GIF';},1000); // after one second flip the images back if they don't match
 	d.style.transition = 'all 2s ease-in-out';
 	d.style.transform = 'rotateY( 180deg )';
-	setTimeout(function(){d.src = './images/dis2.GIF';},1000);
+	setTimeout(function(){d.src = './assets/images/dis2.GIF';},1000);
 }
 
 let button = document.querySelector(".reset")
