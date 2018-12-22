@@ -19,7 +19,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-My final project is a Memory match game. It give sthe user a minute to match all the cards.If they can manage to match all the cards they win if not they lose.
+My final project is a Memory match game. It gives the user a minute to match all the cards.If they can manage to match all the cards they win if not they lose.
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
